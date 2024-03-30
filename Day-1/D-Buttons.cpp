@@ -6,13 +6,13 @@ int main()
     int A, B;
     cin >> A >> B;
 
-    int result = 0;
-    for (int i = A; i <= B; ++i)
+    int max_coins = 2 * max(A, B) - 1;
+    if(A == B)
     {
-        result++;
+        max_coins = 2 * A;
     }
 
-    cout << result << endl;
+    cout << max_coins << endl;
 
     return 0;
 }
